@@ -8,7 +8,7 @@
 
 char *sf(int x)
 {
-	return (x ? "SECCESS" : "FAILS");
+	return (x ? "\033[32mSUCCESS\033[0m" : "\033[31mFAILS\033[0m");
 }
 void test_test() {
 	printf("Running test_test...\n");
