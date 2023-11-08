@@ -1,24 +1,9 @@
-#include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
 #include "libft.h"
-#include <assert.h>
+#include "libtest.h"
 
-//void test_isalpha_lower() {
-//    char c = 'a';
-//    assert(ft_isalpha(c) == isalpha(c));
-//}
-
-void test_test() {
-	printf("Running test_test...\n");
-}
-
-
-char *sf(int x)
-{
-	return (x ? "\033[32mSUCCESS\033[0m" : "\033[31mFAILS\033[0m");
+char *sf(int x)                                                                 
+{                                                                               
+	return (x ? "\033[32mSUCCESS\033[0m" : "\033[31mFAILS\033[0m");               
 }
 
 
@@ -242,47 +227,4 @@ void test_isprint() {
 	a = ft_isprint(c);
 	b = isprint(c);
 	printf("\t%c =>\t%d  |  %d\t%s\n", c, a, b, sf(a != 0 && 0 != b));
-}
-
-
-
-void (*test_functions[50])() = {
-	test_test,
-	test_isalpha,
-	test_isdigit,
-	test_isalnum,
-	test_isascii,
-	test_isprint,
-	NULL
-};
-
-char *function_names[50] = {
-	"test",
-	"isalpha",
-	"isdigit",
-	"isalnum",
-	"isascii",
-	"isprint",
-	NULL
-};
-
-int main(int argc, char *argv[]) {
-	if (argc == 1) {
-		for (int i = 0; test_functions[i]; i++)
-		{
-			test_functions[i]();
-		}
-	} else {
-		for (int i = 1; i < argc; i++)
-		{
-			for (int j = 0; test_functions[j]; j++)
-			{
-				if (strcmp(argv[i], function_names[j]) == 0)
-				{
-					test_functions[j]();
-				}
-			}
-		}
-	}
-	return 0;
 }
