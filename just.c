@@ -55,4 +55,8 @@ int main() {
 	char schr[] = "hello it me $";
 	strchr(str,'\0');
 
+
+
+
+
 }
