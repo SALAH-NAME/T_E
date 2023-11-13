@@ -19,9 +19,11 @@ void test_ft_substr(char const *s, unsigned int start, size_t len)
 
 int main()
 {
-    test_ft_substr("Hello, world!", 0, 5); // "Hello"
+		test_ft_substr("Hello, world!", 0, 5); // "Hello"
     test_ft_substr("Hello, world!", 7, 5); // "world"
+    test_ft_substr("Hello, world!", 12, 5); // "!"
     test_ft_substr("Hello, world!", 13, 5); // "" out of range
+    test_ft_substr("Hello, world!", 23, 5); // "" out of range
     test_ft_substr("Hello, world!", 0, 50); // "Hello, world!"
     test_ft_substr("", 0, 5); // ""
     test_ft_substr(NULL, 0, 5); // NULL
