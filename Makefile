@@ -2,7 +2,8 @@ BIN			=	bin
 LIBFT		= ../libft/libft.a
 
 CFILES	=	isfunctions.c memfunctions.c strfunctions.c tofunctions.c \
-			strlfunctions.c mallfunctions.c test_atoi.c
+			strlfunctions.c mallfunctions.c test_atoi.c \
+			test_substr.c test_strjoin.c
 SFILES	=	${addprefix src/,$(CFILES)}
 
 $(BIN): 

@@ -53,5 +53,10 @@ void test_ft_calloc(size_t nmemb, size_t size, char *expected);
 void main_test_atoi();
 void test_ft_atoi(const char *str, int expected);
 
+void main_test_substr();
+void test_ft_substr(char const *s, unsigned int start, size_t len, char *expected);
+
+void main_test_strjoin();
+void test_ft_strjoin(char const *s1, char const *s2, char *expected);
 
 #endif
