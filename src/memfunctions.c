@@ -83,7 +83,7 @@ void main_ft_memfunctions()
     char str7[50] = "Hello, world!";
     test_ft_memchr(str7, 'w', strlen(str7), "Character 'w' found at position: 7");
     char str8[50] = "Hello, world!";
-    test_ft_memchr(str8, 'w', 0, "Character 'w' not found");
+    test_ft_memchr(str8, 'w', 0, BR"Character 'w' not found"RESET);
 
     printf(ORANGE"Running test_ft_memcmp...\n"RESET);
     char str9[50] = "Hello, world!";
@@ -92,4 +92,7 @@ void main_ft_memfunctions()
     char str11[50] = "Hello, world!";
     char str12[50] = "Hello, world!";
     test_ft_memcmp(str11, str12, 0, "str1 is equal to str2");
+    char str13[50] = "Hello, World!";
+    char str14[50] = "Hello, world!";
+    test_ft_memcmp(str13, str14, strlen(str13), "str1 is less than str2");
 }

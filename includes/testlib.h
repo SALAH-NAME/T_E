@@ -5,6 +5,7 @@
 #define GREEN "\x1B[92m"
 #define BLUE "\x1B[94m"
 #define RED "\x1B[91m"
+#define BR "\x1b[95m"
 #define RESET "\x1B[0m"
 
 #include <stdio.h>
@@ -12,6 +13,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <limits.h>
 #include <assert.h>
 #include "./libft.h"
 
@@ -58,5 +60,22 @@ void test_ft_substr(char const *s, unsigned int start, size_t len, char *expecte
 
 void main_test_strjoin();
 void test_ft_strjoin(char const *s1, char const *s2, char *expected);
+
+void main_test_strtrim();
+void test_ft_strtrim(char const *s1, char const *set, char *expected);
+
+void main_test_split();
+void test_ft_split(char const *s, char c, char *expected);
+
+void main_test_itoa();
+void test_ft_itoa(int n, char *expected);
+
+void main_test_strmapi();
+void test_ft_strmapi(char const *s, char (*f)(unsigned int, char), char *expected);
+
+void main_test_striteri();
+void test_ft_striteri(char *s, char *expected);
+
+
 
 #endif

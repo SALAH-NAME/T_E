@@ -3,7 +3,8 @@ LIBFT		= ../libft/libft.a
 
 CFILES	=	isfunctions.c memfunctions.c strfunctions.c tofunctions.c \
 			strlfunctions.c mallfunctions.c test_atoi.c \
-			test_substr.c test_strjoin.c
+			test_substr.c test_strjoin.c test_strtrim.c test_split.c \
+			test_itoa.c test_strmapi.c test_striteri.c
 SFILES	=	${addprefix src/,$(CFILES)}
 
 $(BIN): 

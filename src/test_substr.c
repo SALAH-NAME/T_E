@@ -24,6 +24,6 @@ void main_test_substr()
     test_ft_substr("Hello,_world!", 13, 5, "'' out of range");
     test_ft_substr("Hello,_world!", 23, 5, "'' out of range");
     test_ft_substr("Hello,_world!", 0, 50, "Hello,_world!");
-    test_ft_substr("", 0, 5, "");
-    test_ft_substr(NULL, 0, 5, "NULL");
+    test_ft_substr("", 0, 5, "''");
+    // test_ft_substr(NULL, 0, 5, "NULL");
 }

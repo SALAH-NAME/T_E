@@ -1,15 +1,5 @@
 #include "testlib.h"
 
-// #include <signal.h>
-// #include <setjmp.h>
-
-// jmp_buf jump_buffer;
-
-// void handle_sigsegv(int sig) {
-//     printf("A segmentation fault (%d) occurred during the test.\n", sig);
-//     longjmp(jump_buffer, 1);
-// 	sig = 0;
-// }
 
 void test_test() {
 	printf(RED"Running test_test...\n"RESET);
@@ -26,6 +16,11 @@ void (*test_functions[50])() = {
 	main_test_atoi,
 	main_test_substr,
 	main_test_strjoin,
+	main_test_strtrim,
+	main_test_split,
+	main_test_itoa,
+	main_test_strmapi,
+	main_test_striteri,
 	NULL
 };
 
@@ -40,11 +35,15 @@ char *function_names[50] = {
 	"test_atoi",
 	"test_substr",
 	"test_strjoin",
+	"test_strtrim",
+	"test_split",
+	"test_itoa",
+	"test_strmapi",
+	"test_striteri",
 	NULL
 };
 
 int main(int argc, char *argv[]) {
-	// signal(SIGSEGV, handle_sigsegv);
 
 	if (argc == 1) {
 		for (int i = 0; test_functions[i]; i++)
