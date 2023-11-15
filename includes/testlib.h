@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <limits.h>
 #include <assert.h>
+#include <fcntl.h>
 #include "./libft.h"
 
 
@@ -75,6 +76,20 @@ void test_ft_strmapi(char const *s, char (*f)(unsigned int, char), char *expecte
 
 void main_test_striteri();
 void test_ft_striteri(char *s, char *expected);
+
+void main_test_putchar_fd();
+void test_ft_putchar_fd(char c, int fd, char *expected);
+
+void main_test_putstr_fd();
+void test_ft_putstr_fd(char *s, int fd, char *expected);
+
+void main_test_putendl_fd();
+void test_ft_putendl_fd(char *s, int fd, char *expected);
+
+void main_test_putnbr_fd();
+void test_ft_putnbr_fd(int n, int fd, char *expected);
+
+
 
 
 

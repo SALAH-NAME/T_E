@@ -1,6 +1,5 @@
 #include "testlib.h"
 
-
 void test_test() {
 	printf(RED"Running test_test...\n"RESET);
 }
@@ -21,6 +20,12 @@ void (*test_functions[50])() = {
 	main_test_itoa,
 	main_test_strmapi,
 	main_test_striteri,
+	main_test_putchar_fd,
+	main_test_putstr_fd,
+	main_test_putendl_fd,
+	main_test_putnbr_fd,
+	test_test,
+	test_test,
 	NULL
 };
 
@@ -32,34 +37,79 @@ char *function_names[50] = {
 	"tofunctions",
 	"strlfunctions",
 	"mallfunctions",
-	"test_atoi",
-	"test_substr",
-	"test_strjoin",
-	"test_strtrim",
-	"test_split",
-	"test_itoa",
-	"test_strmapi",
-	"test_striteri",
+	"atoi",
+	"substr",
+	"strjoin",
+	"strtrim",
+	"split",
+	"itoa",
+	"strmapi",
+	"striteri",
+	"putchar_fd",
+	"putstr_fd",
+	"putstrl_fd",
+	"putnbr_fd",
 	NULL
 };
 
-int main(int argc, char *argv[]) {
+void	help_print(){
+	int i = 0;
+	printf("\tHELP\n");
+	while (function_names[i])
+		printf("- %s\n", function_names[i++]);
+}
 
-	if (argc == 1) {
-		for (int i = 0; test_functions[i]; i++)
+int main(int argc, char *argv[]) {
+	int j;
+	int i = 0;
+	int max = 50;
+
+
+	if (argc == 1)
+	{
+		
+		while (test_functions[i])
 		{
 			test_functions[i]();
+			i++;
 		}
-	} else {
-		for (int i = 1; i < argc; i++)
+	}
+	else if (argc == 2 && !strcmp(argv[1],"help"))
+	{
+		help_print();
+	}
+	else if (argc == 2 && !strcmp(argv[1],"mandatory"))
+	{
+		while (test_functions[i] && i < 19)
 		{
-			for (int j = 0; test_functions[j]; j++)
+			test_functions[i]();
+			i++;
+		}
+	}
+	else if (argc == 2 && !strcmp(argv[1],"bonus"))
+	{
+		i = 19;
+		while (test_functions[i])
+		{
+			test_functions[i]();
+			i++;
+		}
+	}
+	else
+	{
+		i = 1;
+		while (i < argc)
+		{
+			j = 0;
+			while (test_functions[j] && j < max)
 			{
 				if (strcmp(argv[i], function_names[j]) == 0)
 				{
 					test_functions[j]();
 				}
+				j++;
 			}
+			i++;
 		}
 	}
 	return 0;
