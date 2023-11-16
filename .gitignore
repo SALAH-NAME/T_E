@@ -2,4 +2,8 @@
 libft.a
 bin
 ./libft/
-
+.vscode/
+file_char
+file_endl
+file_nbr
+file_str

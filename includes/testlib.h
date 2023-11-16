@@ -6,6 +6,7 @@
 #define BLUE "\x1B[94m"
 #define RED "\x1B[91m"
 #define BR "\x1b[95m"
+#define PP "\x1b[152m"
 #define RESET "\x1B[0m"
 
 #include <stdio.h>
@@ -91,6 +92,39 @@ void test_ft_putnbr_fd(int n, int fd, char *expected);
 
 
 
+
+void main_test_lstnew();
+void test_ft_lstnew(void *content, t_list *expected);
+
+void main_test_lstadd_front();
+void test_ft_lstadd_front(t_list **lst, t_list *new, char *expected);
+
+void main_test_lstsize();
+void test_ft_lstsize(t_list **lst, int expected);
+
+void main_test_lstlast();
+void test_ft_lstlast(t_list **lst, char *expected);
+
+void main_test_lstadd_back();
+void test_ft_lstadd_back(t_list **lst, t_list *new, char *expected);
+
+void main_test_lstdelone();
+void test_ft_lstdelone(t_list **lst, void (*del)(void *), char *expected);
+
+void main_test_lstclear();
+void test_ft_lstclear(t_list **lst, void (*del)(void *));
+
+void main_test_lstiter();
+void test_ft_lstiter(t_list *lst, void (*f)(void *), char *expected);
+
+void main_test_lstmap();
+void test_ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *), char **expected);
+
+
+
+void del(void *content);
+void modify_content(void *content);
+void *to_upper(void *content);
 
 
 #endif

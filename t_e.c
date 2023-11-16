@@ -24,8 +24,15 @@ void (*test_functions[50])() = {
 	main_test_putstr_fd,
 	main_test_putendl_fd,
 	main_test_putnbr_fd,
-	test_test,
-	test_test,
+	main_test_lstnew,
+	main_test_lstadd_front,
+	main_test_lstsize,
+	main_test_lstlast,
+	main_test_lstadd_back,
+	main_test_lstdelone,
+	main_test_lstclear,
+	main_test_lstiter,
+	main_test_lstmap,
 	NULL
 };
 
@@ -49,6 +56,15 @@ char *function_names[50] = {
 	"putstr_fd",
 	"putstrl_fd",
 	"putnbr_fd",
+	"lstnew",
+	"lstadd_front",
+	"lstsize",
+	"lstlast",
+	"lstadd_back",
+	"lstdelone",
+	"lstclear",
+	"lstiter",
+	"lstmap",
 	NULL
 };
 

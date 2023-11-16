@@ -3,14 +3,14 @@
 void test_ft_strlcpy(char *dst, const char *src, size_t dstsize, char *expected)
 {
     size_t result = ft_strlcpy(dst, src, dstsize);
-    printf(BLUE"After strlcpy: %s - size_t: %zu"RESET, dst, result);
+    printf(BLUE"After strlcpy: %s - size_t: %zu\n"RESET, dst, result);
     printf(GREEN"\t|=> %s\n"RESET, expected);
 }
 
 void test_ft_strlcat(char *dst, const char *src, size_t dstsize, char *expected)
 {
     size_t result = ft_strlcat(dst, src, dstsize);
-    printf(BLUE"After strlcat: %s - size_t: %zu"RESET, dst, result);
+    printf(BLUE"After strlcat: %s - size_t: %zu\n"RESET, dst, result);
     printf(GREEN"\t|=> %s\n"RESET, expected);
 }
 

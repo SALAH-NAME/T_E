@@ -3,8 +3,8 @@
 void test_ft_atoi(const char *str, int expected)
 {
     int result = ft_atoi(str);
-    printf(BLUE"ft_atoi(\"%s\") = %d"RESET, str, result);
-    printf(GREEN"\t|=> %s\n"RESET, result == expected ? "Success" : "Failure");
+    printf(BLUE"ft_atoi(\"%s\") = %d\n"RESET, str, result);
+    printf(GREEN"\t|=> %s\n"RESET, result == expected ? "Success" : (BR"Failure"RESET));
 }
 
 void main_test_atoi()

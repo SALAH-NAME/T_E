@@ -3,45 +3,45 @@
 void test_ft_isalpha(char c, char *str)
 {
     if (ft_isalpha(c))
-        printf(BLUE"'%c' is an alphabetic."RESET, c);
+        printf(BLUE"'%c' is an alphabetic.\n"RESET, c);
     else
-        printf(BLUE"'%c' is not an alphabetic."RESET, c);
+        printf(BLUE"'%c' is not an alphabetic.\n"RESET, c);
     printf(GREEN"\t|=> %s\n"RESET,str);
 }
 
 void test_ft_isdigit(char c, char *str)
 {
     if (ft_isdigit(c))
-        printf(BLUE"'%c' is a digit."RESET, c);
+        printf(BLUE"'%c' is a digit.\n"RESET, c);
     else
-        printf(BLUE"'%c' is not a digit."RESET, c);
+        printf(BLUE"'%c' is not a digit.\n"RESET, c);
     printf(GREEN"\t|=> %s\n"RESET,str);
 }
 
 void test_ft_isalnum(char c, char *str)
 {
     if (ft_isalnum(c))
-        printf(BLUE"'%c' is an alphanumeric."RESET, c);
+        printf(BLUE"'%c' is an alphanumeric.\n"RESET, c);
     else
-        printf(BLUE"'%c' is not an alphanumeric."RESET, c);
+        printf(BLUE"'%c' is not an alphanumeric.\n"RESET, c);
     printf(GREEN"\t|=> %s\n"RESET,str);
 }
 
 void test_ft_isascii(int c, char *str)
 {
     if (ft_isascii(c))
-        printf(BLUE"'%c' is an ASCII."RESET, c);
+        printf(BLUE"'%c' is an ASCII.\n"RESET, c);
     else
-        printf(BLUE"'%c' is not an ASCII."RESET, c);
+        printf(BLUE"'%c' is not an ASCII.\n"RESET, c);
     printf(GREEN"\t|=> %s\n"RESET,str);
 }
 
 void test_ft_isprint(int c, char *str)
 {
     if (ft_isprint(c))
-        printf(BLUE"'%c' is a printable."RESET, c);
+        printf(BLUE"'%c' is a printable.\n"RESET, c);
     else
-        printf(BLUE"'%c' is not a printable."RESET, c);
+        printf(BLUE"'%c' is not a printable.\n"RESET, c);
     printf(GREEN"\t|=> %s\n"RESET,str);
 }
 

@@ -3,28 +3,28 @@
 void test_ft_memset(char *start, char *from, int c, size_t n, char *expected)
 {
     ft_memset(from, c, n);
-    printf(BLUE"After memset: %s"RESET, start);
+    printf(BLUE"After memset: %s\n"RESET, start);
     printf(GREEN"\t|=> %s\n"RESET, expected);
 }
 
 void test_ft_bzero(char *start, char *from, size_t n, char *expected)
 {
     ft_bzero(from, n);
-    printf(BLUE"After bzero: %s"RESET, start);
+    printf(BLUE"After bzero: %s\n"RESET, start);
     printf(GREEN"\t|=> %s\n"RESET, expected);
 }
 
 void test_ft_memcpy(char *dest, const char *src, size_t n, char *expected)
 {
     ft_memcpy(dest, src, n);
-    printf(BLUE"After memcpy: %s"RESET, dest);
+    printf(BLUE"After memcpy: %s\n"RESET, dest);
     printf(GREEN"\t|=> %s\n"RESET, expected);
 }
 
 void test_ft_memmove(char *start, char *dest, const char *src, size_t n, char *expected)
 {
     ft_memmove(dest, src, n);
-    printf(BLUE"After memmove: %s"RESET, start);
+    printf(BLUE"After memmove: %s\n"RESET, start);
     printf(GREEN"\t|=> %s\n"RESET, expected);
 }
 
@@ -32,9 +32,9 @@ void test_ft_memchr(const void *s, int c, size_t n, char *expected)
 {
     char *p = ft_memchr(s, c, n);
     if (p)
-        printf(BLUE"Character '%c' found at position: %ld"RESET, c, p - (char *)s);
+        printf(BLUE"Character '%c' found at position: %ld\n"RESET, c, p - (char *)s);
     else
-        printf(BLUE"Character '%c' not found"RESET, c);
+        printf(BLUE"Character '%c' not found\n"RESET, c);
     printf(GREEN"\t|=> %s\n"RESET, expected);
 }
 
@@ -42,11 +42,11 @@ void test_ft_memcmp(const void *s1, const void *s2, size_t n, char *expected)
 {
     int result = ft_memcmp(s1, s2, n);
     if (result > 0)
-        printf(BLUE"str1 is greater than str2"RESET);
+        printf(BLUE"str1 is greater than str2\n"RESET);
     else if (result < 0)
-        printf(BLUE"str1 is less than str2"RESET);
+        printf(BLUE"str1 is less than str2\n"RESET);
     else
-        printf(BLUE"str1 is equal to str2"RESET);
+        printf(BLUE"str1 is equal to str2\n"RESET);
     printf(GREEN"\t|=> %s\n"RESET, expected);
 }
 
